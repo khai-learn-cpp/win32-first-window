@@ -1,0 +1,33 @@
+
+#include <windows.h>
+#include "resource.h"
+
+IDR_MAINFRAME ICON "./icon.ico"
+IDI_SMALL ICON "./icon.ico"
+IDI_APPLICATION ICON "./icon.ico"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "main.exe.manifest"
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904E4"
+		BEGIN
+			VALUE "CompanyName", "Khai Corp"
+			VALUE "FileDescription", "Test .rc in C++"
+			VALUE "FileVersion", "1.0"
+			VALUE "InternalName", "TestRC"
+			VALUE "LegalCopyright", "Hoàng Văn Khải"
+			VALUE "OriginalFilename", "main.exe"
+			VALUE "ProductName", "TestRC"
+			VALUE "ProductVersion", "1.0"
+		END
+	END
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1252
+	END
+END

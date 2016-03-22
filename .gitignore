@@ -1,0 +1,5 @@
+*.exe
+*.o
+*.res
+*.out
+out
