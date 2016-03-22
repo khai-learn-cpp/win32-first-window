@@ -19,7 +19,7 @@ BEGIN
 			VALUE "FileDescription", "Test .rc in C++"
 			VALUE "FileVersion", "1.0"
 			VALUE "InternalName", "TestRC"
-			VALUE "LegalCopyright", "Hoàng Văn Khải"
+			VALUE "LegalCopyright", "Hoang Van Khai"
 			VALUE "OriginalFilename", "main.exe"
 			VALUE "ProductName", "TestRC"
 			VALUE "ProductVersion", "1.0"
