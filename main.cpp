@@ -2,6 +2,11 @@
 #include <windows.h>
 #include "resource.h"
 
+/* GLOBAL */
+
+static WCHAR cname[] = L"WindowClass";
+static WCHAR title[] = L"The very first win32 hello-world by MinGW";
+
 /* PROTOTYPES */
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int);
@@ -12,9 +17,6 @@ HWND mkWin(WNDCLASSEXW, LPWSTR);
 /* DEFINITIONS */
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int show) {
-
-	static WCHAR cname[] = L"WindowClass";
-	static WCHAR title[] = L"The very first win32 hello-world by MinGW";
 
 	WNDCLASSEXW wclass;
 	if (!mkWinClass(wclass, instance, cname)) {
@@ -48,7 +50,7 @@ LRESULT CALLBACK WinProc(HWND window, UINT message, WPARAM wParam, LPARAM lParam
 			PostQuitMessage(0);
 			break;
 		default:
-			return DefWindowProc(window, message, wParam, lParam);
+			return DefWindowProcW(window, message, wParam, lParam);
 	}
 
 	return 0;
