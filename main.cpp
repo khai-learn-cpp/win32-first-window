@@ -45,7 +45,16 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int show) {
 
 LRESULT CALLBACK WinProc(HWND window, UINT message, WPARAM wParam, LPARAM lParam) {
 
+	PAINTSTRUCT paint;
+	HDC hdc;
+	WCHAR hello[] = L"Hello, World!!";
+
 	switch (message) {
+		case WM_PAINT:
+			hdc = BeginPaint(window, &paint);
+			TextOutW(hdc, 5, 5, hello, sizeof(hello) / sizeof(WCHAR));
+			EndPaint(window, &paint);
+			break;
 		case WM_DESTROY:
 			PostQuitMessage(0);
 			break;
