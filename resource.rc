@@ -3,8 +3,8 @@
 #include "resource.h"
 
 IDR_MAINFRAME ICON "./icon.ico"
-IDI_SMALL ICON "./icon.ico"
-IDI_APPLICATION ICON "./icon.ico"
+// IDI_SMALL ICON "./icon.ico"
+// IDI_APPLICATION ICON "./icon.ico"
 CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "main.exe.manifest"
 
 1 VERSIONINFO
